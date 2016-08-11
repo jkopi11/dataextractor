@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $1 == "start" ]
+  then
+    sudo forever start --uid "mpbio_atomicvx" -a server.js
+elif [ $1 == "stop" ]
+  then
+    sudo forever stop "mpbio_atomicvx"
+elif [ $1 == "stopall" ]
+  then
+    sudo forever stopall
+fi
